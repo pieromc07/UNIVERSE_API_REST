@@ -1,10 +1,12 @@
 const express = require('express');
-const dotenv = require('dotenv')
+const cors = require('cors');
+const dotenv = require('dotenv');
 dotenv.config();
 const app = express()
 
-const router = require('./routes/mail/mail.router')
+const router = require('./routes/router')
 
+app.use(cors());
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 

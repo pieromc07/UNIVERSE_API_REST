@@ -22,4 +22,4 @@ const sendMail = (req, res) => {
             res.status(500).json( { message : 'Error sending email', res : error });
         });
 }
-module.exports = { ping, sendMail };
+module.exports = {sendMail };
