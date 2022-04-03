@@ -3,7 +3,9 @@ const ping = Router();
 
 
 ping.get('/ping', (req, res)=>{
-    res.send('pong');
+    res.status(200).json({
+        message: 'pong'
+    })
 });
 
-module.exports = ping;
+export default ping;

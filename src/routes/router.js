@@ -1,9 +1,13 @@
-const { Router} = require('express')
-const ping = require('./test/ping.routes')
-const sendEmail = require('./mail/mail.routes');
+import { Router } from 'express';
+import ping from './test/ping.routes';
+import sendEmail from './mail/mail.routes';
+import weatherRouter from './weather/weather.routes';
+
 const router = Router();
 
 router.use('/', ping)
 router.use('/', sendEmail)
-module.exports = router;
+router.use('/', weatherRouter)
 
+
+export default router;
